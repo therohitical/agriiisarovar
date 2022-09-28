@@ -1,0 +1,27 @@
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1rem;
+}
+.services .box{
+    background: #333;
+
+}
+
+.services .box:hover .image img{
+    transform: scale(1.1);
+}
+.services .box image{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+.services .box image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.services .box-container{
+    @include grid(32rem);
+    gap: 0;
+}
